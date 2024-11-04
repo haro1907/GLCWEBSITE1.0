@@ -5,35 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golden Link College</title>
     <link rel="stylesheet" href="css/home.css">
+    <style>
+        .facebook-logo {
+            width: 20px; /* Adjust size as needed */
+            height: auto;
+            margin-left: 5px; /* Space between text and logo */
+            vertical-align: middle; /* Aligns with text */
+        }
+    </style>
 </head>
 <body>
     <nav class="menu-bar">
-        <div class="GLC_Logo"></div>
-        <br><br>
-        <div class="dropdown">
-            <a class="menu-button dropdown-button">About</a>
-            <div class="dropdown-content">
-                <a href="#" onclick="loadPage('guest/home.html')">Home</a>
-                <a href="#" onclick="loadPage('guest/mission-vision.html')">Mission / Vision</a>
-                <a href="#" onclick="loadPage('guest/programs.html')">Programs</a>
-                <a href="#" onclick="loadPage('guest/school-offers.html')">Offers</a>
-                <a href="#" onclick="loadPage('guest/college-department.html')">College Department</a>
+        <div class="menu-items">
+            <div class="GLC_Logo"></div>
+            <div class="dropdown">
+                <a class="menu-button dropdown-button">About</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="loadPage('guest/home.html')">Home</a>
+                    <a href="#" onclick="loadPage('guest/mission-vision.html')">Mission / Vision</a>
+                    <a href="#" onclick="loadPage('guest/programs.html')">Programs</a>
+                    <a href="#" onclick="loadPage('guest/school-offers.html')">Offers</a>
+                    <a href="#" onclick="loadPage('guest/college-department.html')">College Department</a>
+                </div>
             </div>
+            <a href="login.html" class="menu-button">Login</a>
         </div>
-        
-        <a href="login.html" class="menu-button">Login</a>
-        <p>
-            Waling-waling Street, Barangay 177, Camarin, Caloocan City.<br>
-            Tel: 961-5836<br>
-            Email: <a href="mailto:goldenlink2002@gmail.com" class="email-link">goldenlink2002@gmail.com</a>
-        </p>
+
+        <div class="contact-info">
+            <h3>
+                <a href="https://www.google.com/maps/place/Golden+Link+College/@14.7452002,121.0545574,17z/data=!3m1!4b1!4m6!3m5!1s0x3397b0155d0685d9:0x7281d475d52adb07!8m2!3d14.7452002!4d121.0571323!16zL20vMDlsZm0w?entry=ttu" class="email-link">Waling-waling St., Brgy. 177, Camarin, North Caloocan City, Metro Manila, Philippines.</a>
+            </h3>
+            <h3>
+                Email: <a href="mailto:goldenlink2002@gmail.com" class="email-link">goldenlink2002@gmail.com</a>
+            </h3>
+            <h3>
+                Tel. No.: <a href="tel:+961-5836" class="email-link">961-5836</a>
+            </h3>
+            <h3>
+                <a href="https://web.facebook.com/goldenlinkcollege" target="_blank">
+                    <img src="https://www.freeiconspng.com/uploads/photos-facebook-logo-png-transparent-background-13.png" alt="Facebook" class="facebook-logo">
+                </a>
+                <!-- <a href="https://www.youtube.com/@goldenlinkcollege8054" target="_blank">
+                    <img src="https://www.freeiconspng.com/uploads/hd-youtube-logo-png-transparent-background-20.png" alt="YouTube" class="youtube-logo">
+                </a> -->
+            </h3>
+        </div>
     </nav>
 
-    <!-- Div for loading the About section pages -->
     <div id="contentDiv"></div>
 
     <script>
-        // Load page content into the div
         function loadPage(page) {
             const contentDiv = document.getElementById('contentDiv');
             fetch(page)
@@ -42,16 +63,15 @@
                     return response.text();
                 })
                 .then(data => {
-                    contentDiv.innerHTML = data; // Inject the content into the div
+                    contentDiv.innerHTML = data;
                 })
                 .catch(error => {
                     contentDiv.innerHTML = `<p>Error loading content: ${error.message}</p>`;
                 });
         }
 
-        // Set default page for content div when the window loads
         window.onload = () => {
-            loadPage('guest/home.html'); // Load home.html by default
+            loadPage('guest/home.html');
         };
     </script>
 </body>

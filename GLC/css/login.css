@@ -1,0 +1,192 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://raw.githubusercontent.com/SaladGrens/GLCWebsite/refs/heads/main/resources/glcimage.jpg'); /* Replace with your image file */ 
+    background-size: cover; /* Makes sure the image covers the whole area */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center the content vertically */
+}
+
+/* Container for the forms (login, register, dashboards, etc.) */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Make the container take full width */
+    padding: 20px 40px; /* Increased padding for better spacing */
+}
+
+/* Box for the login, register, and profile sections */
+.login-box, .profile-container {
+    background-color: #fffbea; /* Soft yellow background for the box */
+    padding: 40px; /* Padding for content inside the box */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%; /* Make the box take full width */
+    max-width: 500px; /* Reduced max-width for better fit */
+    text-align: center;
+    margin: 20px; /* Margin for spacing */
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 20px;
+    color: #004085; /* Soft blue for headings */
+    font-size: 24px;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 12px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #004085; /* Soft blue for labels */
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="tel"] {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 14px;
+    border: 1px solid #d1dce5; /* Light gray border */
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #f9fbff; /* Very light blue for input background */
+    color: #333333;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus {
+    border-color: #004085; /* Darker blue on focus */
+}
+
+/* Submit button styles */
+.submit-button {
+    width: 100%; /* Makes the button full width */
+    background-color: #ffc107; /* Soft yellow for buttons */
+    color: #004085; /* Blue text on yellow buttons */
+    padding: 10px 20px; /* Padding for the buttons */
+    margin-top: 10px; /* Space above the button */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease-in-out; /* Transition effect for hover */
+}
+
+.submit-button:hover {
+    background-color: #ffcd39; /* Slightly darker yellow on hover */
+}
+
+/* Links */
+a {
+    color: #004085; /* Blue links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Checkbox */
+#show-password {
+    margin-top: 10px;
+}
+
+/* Delete Button */
+form .delete-button {
+    background-color: #ff4c4c; /* Red button for delete */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+}
+
+form .delete-button:hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+}
+
+/* Back Button */
+.back-button {
+    background-color: #007BFF; /* Soft blue for the logout button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Register link text */
+.register-link {
+    margin-top: 15px;
+}
+
+.register-link p {
+    font-size: 14px;
+    color: #555555;
+}
+
+.register-link a {
+    color: #004085; /* Soft blue for register link */
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.backhome-link {
+    margin-top: 15px;
+}
+
+.backhome-link p {
+    font-size: 14px;
+    color: #555555;
+}
+
+.backhome-link a {
+    color: #004085; /* Soft blue for register link */
+}
+
+.backhome-link a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Information */
+.profile-container p {
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 10px;
+}

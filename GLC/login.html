@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="php/login.php" method="POST">
+                <div class="input-group">
+                    <label for="login">Username or Email</label>
+                    <input type="text" id="login" name="username_or_email" placeholder="Enter your username or email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <input type="checkbox" id="show-password" onclick="togglePassword()"> Show Password
+                </div>
+  
+                <div class="input-group">
+                    <input type="submit" value="Login" class="submit-button">
+                </div>
+        
+                <div class="register-link">
+                    <p>Forgot password? <a href="forgot-password.html">Reset</a></p>
+                </div>
+                
+                <div class="backhome-link">
+                    <p>Stay as <a href="index.html">guest</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle password visibility
+        function togglePassword() {
+            var passwordInput = document.getElementById("password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>

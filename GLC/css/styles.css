@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar {
+    background-color: #fff; /* White background for the menu */
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.menu-button {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333; /* Dark text */
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto; /* Center container horizontally, no vertical margin */
+    padding: 20px;
+    background-color: #fffbea;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: 100vh; /* Ensures the container takes at least the full viewport height */
+    box-sizing: border-box; /* Includes padding within the height calculation */
+    overflow: auto;
+}
+
+
+h2 {
+    text-align: center; /* Center headings */
+    color: #333; /* Dark text color */
+}
+
+textarea {
+    width: 565px;
+    height: 300px; /* Fixed height for textarea */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    margin-bottom: 10px; /* Space below textarea */
+    font-size: 16px; /* Font size for textarea */
+    resize: none; /* Prevents resizing */
+    overflow: auto;
+}
+
+
+button {
+    background-color: #4CAF50; /* Green background for buttons */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding for buttons */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for buttons */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points from list */
+    padding: 0; /* Remove padding */
+}
+
+li {
+    display: flex; /* Flexbox for items */
+    justify-content: space-between; /* Space between text and buttons */
+    background-color: #f9f9f9; /* Light background for list items */
+    margin: 5px 0; /* Space between list items */
+    padding: 10px; /* Padding for list items */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.back-button {
+    display: block; /* Block display for the back button */
+    text-align: center; /* Center text */
+    margin-top: 20px; /* Space above the button */
+    padding: 10px;
+    background-color: #007BFF; /* Blue background for the button */
+    color: white; /* White text */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.news-text {
+    flex: 1;
+}
+.button-group {
+    display: flex;
+    gap: 5px; /* Small gap between buttons */
+}
+.button-group button {
+    padding: 5px 10px;
+    cursor: pointer;
+}

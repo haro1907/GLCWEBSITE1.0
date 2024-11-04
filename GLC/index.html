@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Link College</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <nav class="menu-bar">
+        <div class="GLC_Logo"></div>
+        <br><br>
+        <div class="dropdown">
+            <a class="menu-button dropdown-button">About</a>
+            <div class="dropdown-content">
+                <a href="#" onclick="loadPage('guest/home.html')">Home</a>
+                <a href="#" onclick="loadPage('guest/mission-vision.html')">Mission / Vision</a>
+                <a href="#" onclick="loadPage('guest/programs.html')">Programs</a>
+                <a href="#" onclick="loadPage('guest/school-offers.html')">Offers</a>
+                <a href="#" onclick="loadPage('guest/college-department.html')">College Department</a>
+            </div>
+        </div>
+        
+        <a href="login.html" class="menu-button">Login</a>
+        <p>
+            Waling-waling Street, Barangay 177, Camarin, Caloocan City.<br>
+            Tel: 961-5836<br>
+            Email: <a href="mailto:goldenlink2002@gmail.com" class="email-link">goldenlink2002@gmail.com</a>
+        </p>
+    </nav>
+
+    <!-- Div for loading the About section pages -->
+    <div id="contentDiv"></div>
+
+    <script>
+        // Load page content into the div
+        function loadPage(page) {
+            const contentDiv = document.getElementById('contentDiv');
+            fetch(page)
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.text();
+                })
+                .then(data => {
+                    contentDiv.innerHTML = data; // Inject the content into the div
+                })
+                .catch(error => {
+                    contentDiv.innerHTML = `<p>Error loading content: ${error.message}</p>`;
+                });
+        }
+
+        // Set default page for content div when the window loads
+        window.onload = () => {
+            loadPage('guest/home.html'); // Load home.html by default
+        };
+    </script>
+</body>
+</html>

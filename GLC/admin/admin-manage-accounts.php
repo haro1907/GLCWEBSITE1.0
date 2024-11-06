@@ -55,7 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Delete user
     if (isset($_POST['delete_user'])) {
         $userId = $_POST['user_id'];
-        
+
+        // Now delete the user from glc_users; related prospectus_status will be deleted automatically
         $deleteStmt = $pdo->prepare("DELETE FROM glc_users WHERE id = :user_id");
         if ($deleteStmt->execute([':user_id' => $userId])) {
             echo "<script>alert('User deleted successfully.'); window.location.href = window.location.href;</script>";

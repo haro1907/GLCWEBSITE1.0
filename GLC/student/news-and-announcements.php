@@ -26,9 +26,6 @@ try {
     $newsStmt = $pdo->query("SELECT * FROM news ORDER BY created_at DESC");
     $newsItems = $newsStmt->fetchAll(PDO::FETCH_ASSOC);
 
-    // Determine the back button link based on the program
-    $programPage = "../student/" . htmlspecialchars($_SESSION['program']) . ".html";
-
 } catch (PDOException $e) {
     die("Could not connect to the database: " . $e->getMessage());
 }
@@ -45,12 +42,12 @@ try {
 </head>
 <body>
     <div class="container">
-        <h2>News and Announcements</h2>
+        <h2>Announcements</h2>
+        
         <ul id="newsList">
             <?php if (!empty($newsItems)) : ?>
                 <?php foreach ($newsItems as $news) : ?>
                     <li>
-                       
                         <span><?php echo htmlspecialchars($news['content']); ?></span><br>
                         <em>Posted on: <?php echo date('F j, Y', strtotime($news['created_at'])); ?></em>
                     </li>
@@ -59,7 +56,9 @@ try {
                 <li>No news items available at the moment.</li>
             <?php endif; ?>
         </ul>
-        <a href="<?php echo $programPage; ?>" class="back-button">Back</a>
+
+        <!-- Back button to student.php -->
+        <a href="../student/student.php" class="back-button">Back</a>
     </div>
 </body>
 </html>

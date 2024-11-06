@@ -6,11 +6,46 @@
     <title>Golden Link College</title>
     <link rel="stylesheet" href="css/home.css">
     <style>
-        .facebook-logo {
-            width: 20px; /* Adjust size as needed */
+        .social-logo {
             height: auto;
-            margin-left: 5px; /* Space between text and logo */
-            vertical-align: middle; /* Aligns with text */
+            vertical-align: middle;
+        }
+        .facebook-logo { width: 50px; }
+        .gmail-logo { width: 35px; }
+        .youtube-logo { width: 45px; }
+        .telphone-logo { width: 30px; margin-right: 10px; }
+        .maps-logo { width: 30px; margin: 0 10px; }
+
+        /* Footer styles */
+        .footer {
+            background-color: #2E2F5B;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .footer-links {
+            margin: 10px 0;
+        }
+
+        .footer-links a {
+            margin: 0 5px;
+        }
+
+        .footer-note {
+            font-size: 12px;
+            margin-top: 6px;
         }
     </style>
 </head>
@@ -23,36 +58,59 @@
                 <div class="dropdown-content">
                     <a href="#" onclick="loadPage('guest/home.html')">Home</a>
                     <a href="#" onclick="loadPage('guest/mission-vision.html')">Mission / Vision</a>
-                    <a href="#" onclick="loadPage('guest/programs.html')">Programs</a>
+                    <a href="#" onclick="loadPage('guest/philosophy.html')">Philosophy</a>
+                    <a href="#" onclick="loadPage('guest/principles.html')">Principles</a>
                     <a href="#" onclick="loadPage('guest/school-offers.html')">Offers</a>
                     <a href="#" onclick="loadPage('guest/college-department.html')">College Department</a>
+                    <a href="#" onclick="loadPage('guest/admission.html')">Admission</a>
                 </div>
             </div>
-            <a href="login.html" class="menu-button">Login</a>
-        </div>
-
-        <div class="contact-info">
-            <h3>
-                <a href="https://www.google.com/maps/place/Golden+Link+College/@14.7452002,121.0545574,17z/data=!3m1!4b1!4m6!3m5!1s0x3397b0155d0685d9:0x7281d475d52adb07!8m2!3d14.7452002!4d121.0571323!16zL20vMDlsZm0w?entry=ttu" class="email-link">Waling-waling St., Brgy. 177, Camarin, North Caloocan City, Metro Manila, Philippines.</a>
-            </h3>
-            <h3>
-                Email: <a href="mailto:goldenlink2002@gmail.com" class="email-link">goldenlink2002@gmail.com</a>
-            </h3>
-            <h3>
-                Tel. No.: <a href="tel:+961-5836" class="email-link">961-5836</a>
-            </h3>
-            <h3>
-                <a href="https://web.facebook.com/goldenlinkcollege" target="_blank">
-                    <img src="https://www.freeiconspng.com/uploads/photos-facebook-logo-png-transparent-background-13.png" alt="Facebook" class="facebook-logo">
-                </a>
-                <!-- <a href="https://www.youtube.com/@goldenlinkcollege8054" target="_blank">
-                    <img src="https://www.freeiconspng.com/uploads/hd-youtube-logo-png-transparent-background-20.png" alt="YouTube" class="youtube-logo">
-                </a> -->
-            </h3>
+            <div class="dropdown">
+                <a class="menu-button dropdown-button">Programs</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="loadPage('guest/bspsych.html')">BS Psychology</a>
+                    <a href="#" onclick="loadPage('guest/bsba.html')">BSBA</a>
+                    <a href="#" onclick="loadPage('guest/bsit.html')">BSIT</a>
+                    <a href="#" onclick="loadPage('guest/bse-math.html')">BSE-MATH</a>
+                    <a href="#" onclick="loadPage('guest/bse-eng.html')">BSE-ENG</a>
+                    <a href="#" onclick="loadPage('guest/bse-sci.html')">BSE-SCI</a>
+                    <a href="#" onclick="loadPage('guest/bsais.html')">BS AIS</a>
+                    <a href="#" onclick="loadPage('guest/beed.html')">BEED</a>
+                </div>
+            </div>
+            <a href="login.html" class="menu-button">Student Portal</a>
         </div>
     </nav>
 
-    <div id="contentDiv"></div>
+    <div id="contentDiv">
+        <!-- Content will load here -->
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <p>Golden Link College</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.google.com/maps/place/Golden+Link+College/@14.7452002,121.0545574,17z/data=!3m1!4b1!4m6!3m5!1s0x3397b0155d0685d9:0x7281d475d52adb07!8m2!3d14.7452002!4d121.0571323!16zL20vMDlsZm0?entry=ttu" target="_blank">
+                    <img src="https://cdn-icons-png.freepik.com/256/7429/7429649.png?semt=ais_hybrid" alt="Maps" class="maps-logo social-logo">
+                </a>
+                <a href="tel:+961-5836" target="_blank">
+                    <img src="https://cdn-icons-png.freepik.com/256/724/724664.png?semt=ais_hybrid" alt="Phone" class="telphone-logo social-logo">
+                </a>
+                <a href="mailto:goldenlink2002@gmail.com" target="_blank">
+                    <img src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_256px.png" alt="Gmail" class="gmail-logo social-logo">
+                </a>
+                <a href="https://web.facebook.com/goldenlinkcollege" target="_blank">
+                    <img src="https://www.freeiconspng.com/uploads/photos-facebook-logo-png-transparent-background-13.png" alt="Facebook" class="facebook-logo social-logo">
+                </a>
+                <a href="https://www.youtube.com/@goldenlinkcollege8054" target="_blank">
+                    <img src="https://www.freeiconspng.com/uploads/hd-youtube-logo-png-transparent-background-20.png" alt="YouTube" class="youtube-logo social-logo">
+                </a>
+            </div>
+            <p class="footer-note">&copy; 2024 Golden Link College. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
         function loadPage(page) {

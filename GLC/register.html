@@ -42,9 +42,15 @@
                         <option value="STAFF">STAFF</option>
                     </select>
                 </div>
+                <button type="button" class="remove-button" onclick="removeStudent(this)">Remove User</button>
                 <hr>
             `;
             container.appendChild(studentForm);
+        }
+
+        function removeStudent(button) {
+            const studentForm = button.parentElement; // Get the parent div of the button
+            studentForm.remove(); // Remove the student entry
         }
     </script>
 </head>

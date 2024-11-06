@@ -47,44 +47,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['role'] = $userData['role'];
             $_SESSION['program'] = $userData['program']; // Add the program to session data
 
-            // Redirect based on user role and program
+            // Redirect based on user role
             if ($userData['role'] == 'admin') {
                 header("Location: ../admin/admin.html");
             } elseif ($userData['role'] == 'student') {
-                switch ($userData['program']) {
-                    case 'BSPSYCH':
-                        header("Location: ../student/BSPSYCH.html");
-                        break;
-                    case 'BSE-ENG':
-                        header("Location: ../student/BSE-ENG.html");
-                        break;
-                    case 'BSE-MATH':
-                        header("Location: ../student/BSE-MATH.html");
-                        break;
-                    case 'BSE-SCI':
-                        header("Location: ../student/BSE-SCI.html");
-                        break;
-                    case 'BEED':
-                        header("Location: ../student/BEED.html");
-                        break;
-                    case 'BSBA':
-                        header("Location: ../student/BSBA.html");
-                        break;
-                    case 'BSAIS':
-                        header("Location: ../student/BSAIS.html");
-                        break;
-                    case 'BSIT':
-                        header("Location: ../student/BSIT.html");
-                        break;
-                    default:
-                        header("Location: ../student/default.html"); // Optional: Fallback page for unknown programs
-                        break;
+                        header("Location: ../student/student.php"); 
                 }
-            }
             exit();
         } else {
             echo "<script>
-                if (confirm('Incorrect username, password, or role. Click OK to try again.')) {
+                if (confirm('The credentials do not match our records. Click OK to try again.')) {
                     window.history.back();
                 }
             </script>";

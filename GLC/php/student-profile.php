@@ -31,8 +31,8 @@ try {
     $today = new DateTime();
     $age = $today->diff($dob)->y;
 
-    // Determine the back button link based on the program
-    $programPage = "../student/" . htmlspecialchars($user['program']) . ".html";
+    // Set the back button link to student.php
+    $programPage = "../student/student.php";
 
 } catch (PDOException $e) {
     die("Could not connect to the database: " . $e->getMessage());
@@ -40,8 +40,10 @@ try {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard</title>
     <link rel="stylesheet" href="../css/login.css">
 </head>
@@ -54,7 +56,7 @@ try {
             <form action="update-user.php" method="post">
                 <p><strong>Identification Number:</strong> <?php echo htmlspecialchars($user['id']); ?></p>
                 <p><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></p>
-                <p><strong>Program:</strong> <?php echo htmlspecialchars($user['program']); ?></p> <!-- Added program display -->
+                <p><strong>Program:</strong> <?php echo htmlspecialchars($user['program']); ?></p>
 
                 <div class="input-group">
                     <label for="username">Username</label>
@@ -100,7 +102,7 @@ try {
                 <input type="submit" value="Delete Account" class="delete-button">
             </form>
             <br>
-            <!-- Dynamic Back Button -->
+            <!-- Back Button to student.php -->
             <a href="<?php echo $programPage; ?>" class="back-button">Back</a>
         </div>
     </div>

@@ -27,13 +27,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $program = $_POST['program'][$i];
 
         // Set default values
-        $firstname = "Not Set";
-        $lastname = "Not Set";
-        $middlename = "Not Set";
-        $username = "Not Set";
+        $firstname = " ";
+        $lastname = " ";
+        $middlename = " ";
+        $username = " ";
         $contact = "00000000000"; // Placeholder contact number
-        $dob = "Not Set"; // Placeholder date of birth
-        $defaultPassword = "GOLDENLINKER2002";
+        $dob = " "; // Placeholder date of birth
+        $defaultPassword = "GLC123";
 
         // Hash the default password
         $hashedPassword = password_hash($defaultPassword, PASSWORD_DEFAULT);

@@ -29,6 +29,7 @@ body {
 .menu-items {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .contact-info {
@@ -46,14 +47,14 @@ body {
     background-image: url('https://raw.githubusercontent.com/SaladGrens/GLCWebsite/refs/heads/main/resources/GLC_logo2.png');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 20px;
+    margin-right: 500px;
+    margin-left: 80px;
 }
 
 .menu-button {
     background-color: #F4D35E;
     color: #2E2F5B;
-    padding: 8px 20px;
-    margin: 0 10px;
+    padding: 8px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -63,6 +64,7 @@ body {
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-decoration: none;
+    margin-left: 10px;
 }
 
 .menu-button:hover {
@@ -84,6 +86,12 @@ body {
     content: " ▼"; /* Adds a down arrow */
     font-size: 0.8em; /* Adjusts the arrow size */
     margin-left: 5px; /* Adds a small space between the text and the arrow */
+}
+
+.dropdown-button:hover {
+    background-color: #c4a843;
+    color: #f5f5f5;
+    transform: scale(1.1); /* Zooms the button by 10% when hovered */
 }
 
 .dropdown-content {
